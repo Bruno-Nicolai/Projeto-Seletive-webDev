@@ -1,0 +1,140 @@
+    {% extends 'base.html' %}
+    {% load static %}
+
+
+    {% block 'head' %}
+    <link rel="stylesheet" href="{% static 'vaga/css/vaga.css' %}"> 
+    {% endblock %}
+
+    {% block 'body' %}
+        {% comment %} {{vaga.titulo}} {% endcomment %}
+        <div class="container">
+            {% if messages %}
+                {% for message in messages %}
+                    <br>
+                    <section class="alert {{message.tags}}">
+                        {{message}}
+                    </section>
+                {% endfor %}
+            {% endif %}
+            <h3 class="title">{{vaga.titulo}}</h3>
+            <p class="subtitle2">{{vaga.empresa}}</p>
+
+        </div>
+
+        <div class="my_section">
+            <div class="container">
+                <div class="items">
+                    <p class="title2">Crie uma tarefa</p>
+                    <p>Lembre-se de realizar todas as suas tarefas com antecedência</p>
+
+
+                    <form action="{% url 'nova_tarefa' vaga.id %}" method="POST" >{% csrf_token %}
+                            <div class="item">
+                                <label>Título:</label>
+                                <input name="titulo" type="text" class="form-control input-tarefa" placeholder="Digite o título da tarefa..."> 
+                            </div>
+                            <div class="item">
+                                <label>Prioridade:</label>
+                                <select name="prioridade" class="form-select input-tarefa">
+                                    <option value="U">Urgente</option>
+                                    <option value="A">Alta</option>
+                                    <option value="B">Baixa</option>
+                                </select>
+                            </div>
+                            <div class="item">
+                                <label>Data:</label>
+                                <input name="data" type="date" class="form-control input-tarefa" placeholder=""> 
+                                <br>
+                                <input type="submit" value="Nova tarefa" class="btn btn-orange">
+                            </div>
+
+                    </form>
+
+                </div>
+
+                    <div class="col-md">
+                        {% for tarefa in tarefas %}
+                            <div class="li-tarefa">
+                                <label>{{tarefa.titulo}}</label>
+                                <label class="prioridade-bloco">
+                                    {{tarefa.icon}}
+                                    {{tarefa.get_prioridade_display}}
+                                </label>
+                                <label class="prioridade-bloco">
+                                    {{tarefa.data}}
+                                </label>
+                                <label class="prioridade-bloco">
+                                    <a href="{% url 'realizar_tarefa' tarefa.id %}" class="btn btn-success">Finalizado</a>
+                                </label>
+
+                            </div>
+                        {% endfor %}
+                    </div>
+
+            </div>
+
+        </div>
+
+        <div class="container my_section">
+            <div class="row">
+
+                <div class="col-md-4">
+                    <p class="title2">Enviar E-mail</p>
+                    <p>Envie e-mails para essa vaga por aqui.</p>
+                </div>
+
+                <div class="col-md">
+                    <form action="{% url 'envia_email' vaga.id%}" method="POST">{% csrf_token %}
+                        
+                        <div class="col-md-15">
+                            <label>Assunto:</label>
+                            <input name="assunto" type="text" class="form-control" placeholder="assunto">
+                        </div>
+                        
+                        <div class="col-md-15">
+                            <label>Corpo do email:</label>
+                            <textarea name="corpo" class="form-control"></textarea>
+                        </div>
+                        
+                        <input type="submit" class="btn btn-orange" value="Enviar">
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="my_section">
+            <div class="container">
+                <div class="row"> 
+                    <h3 class="title2">Histórico de e-mails</h3>
+                    
+                        {% for email in email%}
+                            <div class="col-md-4">
+
+                                <div class="box-email">
+                                    <div class="header-email">
+                                        <p>
+                                            {{email.assunto}}
+                                        </p>
+                                    </div>
+                                    
+                                    <div class="body-email">
+                                        <p>
+                                            {{email.corpo}}
+                                        </p>
+                                    </div>
+                                    
+                                </div>
+
+                            </div>
+                        {% endfor %}
+                    
+                </div> 
+                
+                        
+            </div>
+        </div>
+
+    {% endblock %}

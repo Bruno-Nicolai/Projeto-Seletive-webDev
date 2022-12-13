@@ -1,0 +1,106 @@
+.title{
+    text-transform: uppercase;
+    color: #311919;
+    font-weight: bold;
+    font-size: 4em;
+    margin-top: 3rem;
+}
+
+.subtitle2{
+    margin: 0 1rem;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.title2{
+    text-transform: capfirst;
+    color: #311919;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.my_section{
+    margin-top: 2.5rem;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+}
+
+.input-tarefa{
+    margin: 0 2rem 0 0;
+    width: 50%;
+}
+
+label {
+    margin-top: 1rem;
+}
+
+.btn-orange {
+    margin-top: 2rem;
+    background-color: #ED8554;
+    color: white;
+}
+
+
+
+.list-tarefa{
+    list-style: none;
+}
+
+.li-tarefa{
+    background-color: #8D4747;
+    padding: 10px;
+    color:white;
+    border-radius: 10px;
+    margin-top: 4rem;
+}
+
+.li-tech{
+    background-color: #3B0032;
+    padding: 10px;
+    color:white;
+    border-radius: 10px;
+    margin-top: 10px;
+    width: 60%;
+}
+
+.arrow-right{
+    float: right;
+}
+
+.prioridade-bloco{
+    margin-left: 20px;
+}
+
+.prioridade-vermelho{
+    color: red;
+}
+
+.prioridade-amarelo{
+    color: yellow;
+}
+
+.prioridade-verde{
+    color: green;
+}
+
+.box-email{
+    width: 400px;
+    margin-top: 60px;
+    background-color: #311919;
+    box-shadow: 2px 2px 2px 2px rgba(0,0,0,.5);
+}
+
+.header-email{
+    background-color: #FE9920;
+    padding: 15px;
+    color: white
+}
+
+.body-email{
+    padding: 2rem;
+}
+
+.body-email p {
+    color: #FFF
+}

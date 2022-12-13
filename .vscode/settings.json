@@ -1,0 +1,10 @@
+{
+    "editor.formatOnSave": true, 
+    "python.formatting.provider": "autopep8", 
+    "python.linting.enabled": false, 
+    "python.linting.lintOnSave": true,
+
+    "emmet.includeLanguages": {
+        "django-html": "html"
+    }
+}
