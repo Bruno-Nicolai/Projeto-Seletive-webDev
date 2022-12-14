@@ -1,1 +1,7 @@
 Seletive é um projeto em que o usuário tem acesso a um gerenciamento de vagas para processos seletivos nas empresas, que ele mesmo pode adicionar ou remover. O gerenciamento ainda está em fase de aprimoração e, portanto, ainda precisa de alguns ajustes. Porém, o protótipo base dele é este. É possível criar, ver, atualizar e deletar dados das empresas dentro do serviço., bem como adicionar vagas que, no entanto, somente o superuser pode excluir, uma vez que não faz muito sentido o usuário comum excluir um processo seletivo já finalizado, uma vez que é bom registrar no sistema o histórico da empresa que estiver ali cadastrada. Podem ser inseridas - com nível de prioridade - tarefas na página das vagas das empresas, bem como e-mails fictícios que podem ser enviados na própria página registram-se assim que enviados.
+
+![home-empresas](https://user-images.githubusercontent.com/97241467/207472179-661b635e-35ee-4f42-9acb-f3a2d5f770ba.jpg)
+![home-nova_empresa](https://user-images.githubusercontent.com/97241467/207472173-e082412c-99b8-443c-8ae4-7c4539327dbd.jpg)
+![empresa](https://user-images.githubusercontent.com/97241467/207472176-a6210f6c-7915-4c0f-b8f6-32417ec20619.jpg)
+![empresa-nova_vaga png](https://user-images.githubusercontent.com/97241467/207472177-fdc17297-11f7-4f37-b357-c485253449ba.jpg)
+![vaga](https://user-images.githubusercontent.com/97241467/207472174-fe3a9ef1-9e45-417b-9f00-684aeca5d91c.jpg)
